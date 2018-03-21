@@ -32,7 +32,8 @@ app.use(bodyParser.urlencoded({extended : true}));
 /*------setup mongoose-------*/
 var mongoose = require("mongoose");
 // mongoose.connect("mongodb://localhost/yelp_camp");
-mongoose.connect("mongodb://floydc:lvxing123@ds121089.mlab.com:21089/yelp_camp");
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp"
+mongoose.connect(url);
 
 
 /*------setup connect-flash-------*/
