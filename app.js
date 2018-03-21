@@ -31,7 +31,9 @@ app.use(bodyParser.urlencoded({extended : true}));
 
 /*------setup mongoose-------*/
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/yelp_camp");
+// mongoose.connect("mongodb://localhost/yelp_camp");
+mongoose.connect("mongodb://floydc:lvxing123@ds121089.mlab.com:21089/yelp_camp");
+
 
 /*------setup connect-flash-------*/
 app.use(flash());
@@ -54,7 +56,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use(function(req, res, next) {
     res.locals.currentUser = req.user;
     res.locals.error = req.flash("error");
-    res.locals.success = req.flash("success");
+    res.locals.success = req.flash("succes");
     next();
 });
 
