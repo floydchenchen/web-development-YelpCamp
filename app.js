@@ -70,6 +70,8 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 app.use("/campgrounds", campgroundRoutes);
 
 /*------create a socket and listen for connections-------*/
-app.listen(process.env.PORT, process.env.IP, function() {
+var listener = app.listen(process.env.PORT || 3000, process.env.IP, function() {
     console.log("YelpCamp has started!");
+    console.log("Port number: " + listener.address.port);
+    console.log("IP Address: " + listener.address.ip);
 });
