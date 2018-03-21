@@ -1,6 +1,11 @@
 # YelpCamp Project
 
-## Inital Routes
+## Visiting the page
+This page could be visited at:
+https://floydyelpcamp.herokuapp.com/
+
+
+## Initial Routes
 * add landing page
 * add campgrounds page that lists all campgrounds:
     * name
